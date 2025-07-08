@@ -1,0 +1,13 @@
+syntax = "proto3";
+package brclbchc.brclbchc.v1;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "brclbchc/x/brclbchc/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "brclbchc/x/brclbchc/Params";
+  option (gogoproto.equal) = true;
+}

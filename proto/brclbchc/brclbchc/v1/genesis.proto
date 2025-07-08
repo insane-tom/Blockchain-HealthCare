@@ -1,0 +1,17 @@
+syntax = "proto3";
+package brclbchc.brclbchc.v1;
+
+import "amino/amino.proto";
+import "brclbchc/brclbchc/v1/params.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "brclbchc/x/brclbchc/types";
+
+// GenesisState defines the brclbchc module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
